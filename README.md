@@ -8,8 +8,8 @@ The project was completed progressively from Task 1 to Task 4. Each task added a
 
 
 Task 1 — Sensor Read and Print
-Function
-Task 1 tests the DHT11 sensor and confirms that the ESP32 can read temperature and humidity correctly.
+-Function:
+*Tests the DHT11 sensor and confirms that the ESP32 can read temperature and humidity correctly.
 The DHT11 is connected to GPIO33. The ESP32 reads the sensor every five seconds and prints the results in the Thonny Shell.
 What was implemented
 
@@ -25,16 +25,16 @@ Printed the values to the serial monitor.
 
 Added a five-second delay between readings.
 
-Purpose
+-Purpose:
 
 This task verifies that the sensor is correctly wired and functioning before adding Telegram and relay features.
 
 
 Task 2 — Telegram Message Sending
 
-Function
+-Function:
 
-Task 2 connects the ESP32 to Wi-Fi and sends a test message to a Telegram group using the Telegram Bot API.
+*Connects the ESP32 to Wi-Fi and sends a test message to a Telegram group using the Telegram Bot API.
 
 The ESP32 uses the Wi-Fi network to access Telegram’s online API. A test message such as Hello World is sent to the configured Telegram chat.
 
@@ -52,16 +52,16 @@ Used urequests.post() to send the message.
 
 Printed the result in the Thonny Shell.
 
-Purpose
+-Purpose:
 
-This task verifies that the ESP32 has internet access and can communicate with Telegram before receiving commands.
+*This task verifies that the ESP32 has internet access and can communicate with Telegram before receiving commands.
 
 
 Task 3 — Telegram Commands
 
-Function
+-Function
 
-Task 3 adds remote control through Telegram. The user can send commands to the bot, and the ESP32 responds accordingly.
+*Adds remote control through Telegram. The user can send commands to the bot, and the ESP32 responds accordingly.
 The system supports three commands:
 /status
 /on
@@ -86,12 +86,12 @@ Checked that the message came from the configured chat ID.
 Compared the received text with /status, /on, and /off.
 Controlled the relay connected to GPIO2.
 Returned the sensor and relay information through Telegram.
-Purpose
+-Purpose:
 This task converts the project from a local sensor system into a remotely controlled IoT system.
 
 Task 4 — Automatic Temperature Control
-Function
-Task 4 adds automatic temperature-based behavior using a threshold of 27 °C.
+-Function:
+*Adds automatic temperature-based behavior using a threshold of 27 °C.
 The ESP32 checks the temperature every five seconds and decides whether to send an alert or turn off the relay automatically.
 Temperature below 27 °C
 When the temperature is below 27 °C:
@@ -116,7 +116,7 @@ Sent alerts every five-second loop when appropriate.
 Turned the relay off automatically below 27 °C.
 Used a state variable to send only one AUTO-OFF notification.
 Kept manual Telegram control with /status, /on, and /off.
-Purpose
+-Purpose:
 This task completes the automatic IoT control system. The ESP32 can now monitor the environment, notify the user, and control the relay without requiring constant manual input.
 
 Overall System Operation
