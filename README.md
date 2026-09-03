@@ -151,6 +151,9 @@ Kept manual Telegram control with /status, /on, and /off.
 
 This task completes the automatic IoT control system. The ESP32 can now monitor the environment, notify the user, and control the relay without requiring constant manual input.
 
+<img width="698" height="1068" alt="Screenshot 2026-09-03 162755" src="https://github.com/user-attachments/assets/1d798cbc-80a7-43fd-8f45-2144e7b50c4f" />
+
+
 Overall System Operation
 
 The final system follows this process:
