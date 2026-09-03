@@ -1,20 +1,13 @@
-# lOT-Lab
+Task 5 Documentation Summary
 Overall Project
 This project uses an ESP32, a DHT11 temperature/humidity sensor, a relay module, Wi-Fi, and a Telegram bot.
 The DHT11 measures the surrounding temperature and humidity. The ESP32 processes the sensor readings and controls the relay. Telegram provides a remote interface where the user can check the sensor status and turn the relay on or off.
 The project was completed progressively from Task 1 to Task 4. Each task added a new function to the system, beginning with basic sensor reading and ending with automatic temperature-based relay control.
 
-<img width="799" height="824" alt="Screenshot 2026-09-03 160601" src="https://github.com/user-attachments/assets/0962f656-e71f-4002-9bc0-c9c27a9ad472" />
-
-
 Task 1 — Sensor Read and Print
 Function
 Task 1 tests the DHT11 sensor and confirms that the ESP32 can read temperature and humidity correctly.
 The DHT11 is connected to GPIO33. The ESP32 reads the sensor every five seconds and prints the results in the Thonny Shell.
-Example output:
-text
-Temperature: 28 C
-Humidity: 70 %
 What was implemented
 Initialized the DHT11 sensor using GPIO33.
 Used sensor.measure() to obtain a new reading.
@@ -24,8 +17,6 @@ Printed the values to the serial monitor.
 Added a five-second delay between readings.
 Purpose
 This task verifies that the sensor is correctly wired and functioning before adding Telegram and relay features.
-Screenshot evidence
-
 
 Task 2 — Telegram Message Sending
 Function
@@ -38,15 +29,8 @@ Used the Telegram sendMessage method.
 Sent the message to the configured chat ID.
 Used urequests.post() to send the message.
 Printed the result in the Thonny Shell.
-Example Telegram message:
-text
-Hello World
 Purpose
 This task verifies that the ESP32 has internet access and can communicate with Telegram before receiving commands.
-Screenshot evidence
-Insert your screenshot here:
-text
-[Insert Task 2 Telegram “Hello World” screenshot here]
 
 Task 3 — Telegram Commands
 Function
@@ -60,11 +44,6 @@ The ESP32 reads the current DHT11 values and sends a reply containing:
 Current temperature.
 Current humidity.
 Current relay state.
-Example:
-text
-Temperature: 28 C
-Humidity: 70 %
-Relay: OFF
 /on
 When the user sends /on:
 The ESP32 activates the relay.
@@ -82,16 +61,6 @@ Controlled the relay connected to GPIO2.
 Returned the sensor and relay information through Telegram.
 Purpose
 This task converts the project from a local sensor system into a remotely controlled IoT system.
-Screenshot evidence
-Insert your screenshot here:
-text
-[Insert Task 3 Telegram commands screenshot here]
-The screenshot should show:
-text
-/status
-/on
-/off
-and the corresponding bot replies.
 
 Task 4 — Automatic Temperature Control
 Function
@@ -103,24 +72,11 @@ The bot sends no high-temperature alerts.
 If the relay is on, the ESP32 turns it off automatically.
 The bot sends one AUTO-OFF notification.
 The same AUTO-OFF notification is not repeated continuously.
-Example:
-text
-AUTO-OFF
-Temperature: 26 C
-Temperature is below 27 C.
-Relay turned OFF automatically.
-Temperature at least 27 °C
-When the temperature is 27 °C or higher and the relay is off:
+Temperature at least 28 °C
+When the temperature is 28 °C or higher and the relay is off:
 The bot sends a high-temperature alert.
 The alert is sent once every five seconds.
 Alerts continue until the user sends /on.
-Example:
-text
-ALERT!
-Temperature: 28 C
-Temperature is at or above 27 C.
-Relay is OFF.
-Send /on to turn relay ON.
 After /on
 When the user sends /on:
 The relay turns on.
@@ -135,22 +91,6 @@ Used a state variable to send only one AUTO-OFF notification.
 Kept manual Telegram control with /status, /on, and /off.
 Purpose
 This task completes the automatic IoT control system. The ESP32 can now monitor the environment, notify the user, and control the relay without requiring constant manual input.
-Screenshot or video evidence
-Insert your evidence here:
-text
-[Insert Task 4 alert screenshot here]
-[Insert Task 4 AUTO-OFF screenshot here]
-[Insert Task 4 demonstration-video link here]
-The demonstration should show:
-Temperature below 27 °C.
-No alert while below the threshold.
-Temperature rising to at least 27 °C.
-Repeated alerts while the relay is off.
-/on being sent.
-Alerts stopping after /on.
-Temperature dropping below 27 °C.
-Automatic relay shutdown.
-One-time AUTO-OFF notification.
 
 Overall System Operation
 The final system follows this process:
@@ -165,3 +105,6 @@ The ESP32 checks whether the temperature is below or above 27 °C.
 If the temperature is at least 27 °C and the relay is off, Telegram alerts are sent every five seconds.
 If the temperature falls below 27 °C, the relay turns off automatically and one AUTO-OFF notice is sent.
 The process repeats continuously.
+
+
+
