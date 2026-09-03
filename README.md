@@ -8,7 +8,9 @@ The project was completed progressively from Task 1 to Task 4. Each task added a
 
 
 Task 1 — Sensor Read and Print
+
 -Function:
+
 *Tests the DHT11 sensor and confirms that the ESP32 can read temperature and humidity correctly.
 The DHT11 is connected to GPIO33. The ESP32 reads the sensor every five seconds and prints the results in the Thonny Shell.
 What was implemented
@@ -90,7 +92,9 @@ Returned the sensor and relay information through Telegram.
 This task converts the project from a local sensor system into a remotely controlled IoT system.
 
 Task 4 — Automatic Temperature Control
+
 -Function:
+
 *Adds automatic temperature-based behavior using a threshold of 27 °C.
 The ESP32 checks the temperature every five seconds and decides whether to send an alert or turn off the relay automatically.
 Temperature below 27 °C
@@ -116,10 +120,13 @@ Sent alerts every five-second loop when appropriate.
 Turned the relay off automatically below 27 °C.
 Used a state variable to send only one AUTO-OFF notification.
 Kept manual Telegram control with /status, /on, and /off.
+
 -Purpose:
+
 This task completes the automatic IoT control system. The ESP32 can now monitor the environment, notify the user, and control the relay without requiring constant manual input.
 
 Overall System Operation
+
 The final system follows this process:
 The ESP32 starts and initializes the DHT11 and relay.
 The ESP32 connects to Wi-Fi.
