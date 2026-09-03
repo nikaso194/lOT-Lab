@@ -1,39 +1,66 @@
 Task 5 Documentation Summary
+
+
 Overall Project
 This project uses an ESP32, a DHT11 temperature/humidity sensor, a relay module, Wi-Fi, and a Telegram bot.
 The DHT11 measures the surrounding temperature and humidity. The ESP32 processes the sensor readings and controls the relay. Telegram provides a remote interface where the user can check the sensor status and turn the relay on or off.
 The project was completed progressively from Task 1 to Task 4. Each task added a new function to the system, beginning with basic sensor reading and ending with automatic temperature-based relay control.
+
 
 Task 1 — Sensor Read and Print
 Function
 Task 1 tests the DHT11 sensor and confirms that the ESP32 can read temperature and humidity correctly.
 The DHT11 is connected to GPIO33. The ESP32 reads the sensor every five seconds and prints the results in the Thonny Shell.
 What was implemented
+
 Initialized the DHT11 sensor using GPIO33.
+
 Used sensor.measure() to obtain a new reading.
+
 Read the temperature using sensor.temperature().
+
 Read the humidity using sensor.humidity().
+
 Printed the values to the serial monitor.
+
 Added a five-second delay between readings.
+
 Purpose
+
 This task verifies that the sensor is correctly wired and functioning before adding Telegram and relay features.
 
+
 Task 2 — Telegram Message Sending
+
 Function
+
 Task 2 connects the ESP32 to Wi-Fi and sends a test message to a Telegram group using the Telegram Bot API.
+
 The ESP32 uses the Wi-Fi network to access Telegram’s online API. A test message such as Hello World is sent to the configured Telegram chat.
+
 What was implemented
+
 Connected the ESP32 to the configured Wi-Fi network.
+
 Created the Telegram bot URL using the bot token.
+
 Used the Telegram sendMessage method.
+
 Sent the message to the configured chat ID.
+
 Used urequests.post() to send the message.
+
 Printed the result in the Thonny Shell.
+
 Purpose
+
 This task verifies that the ESP32 has internet access and can communicate with Telegram before receiving commands.
 
+
 Task 3 — Telegram Commands
+
 Function
+
 Task 3 adds remote control through Telegram. The user can send commands to the bot, and the ESP32 responds accordingly.
 The system supports three commands:
 /status
