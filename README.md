@@ -97,13 +97,13 @@ Task 4 — Automatic Temperature Control
 
 -Function:
 
-*Adds automatic temperature-based behavior using a threshold of 27 °C.
+*Adds automatic temperature-based behavior using a threshold of 28 °C.
 
 The ESP32 checks the temperature every five seconds and decides whether to send an alert or turn off the relay automatically.
 
-Temperature below 27 °C
+Temperature below 28 °C
 
-When the temperature is below 27 °C:
+When the temperature is below 28 °C:
 
 The bot sends no high-temperature alerts.
 
@@ -135,13 +135,13 @@ The user can continue using /status to check the system.
 
 What was implemented
 
-Set the temperature threshold to 27 °C.
+Set the temperature threshold to 28 °C.
 
 Checked whether the temperature was below or above the threshold.
 
 Sent alerts every five-second loop when appropriate.
 
-Turned the relay off automatically below 27 °C.
+Turned the relay off automatically below 28 °C.
 
 Used a state variable to send only one AUTO-OFF notification.
 
@@ -172,11 +172,11 @@ The ESP32 checks for Telegram commands.
 
 /off turns the relay off.
 
-The ESP32 checks whether the temperature is below or above 27 °C.
+The ESP32 checks whether the temperature is below or above 28 °C.
 
-If the temperature is at least 27 °C and the relay is off, Telegram alerts are sent every five seconds.
+If the temperature is at least 28 °C and the relay is off, Telegram alerts are sent every five seconds.
 
-If the temperature falls below 27 °C, the relay turns off automatically and one AUTO-OFF notice is sent.
+If the temperature falls below 28 °C, the relay turns off automatically and one AUTO-OFF notice is sent.
 
 The process repeats continuously.
 
