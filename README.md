@@ -4,6 +4,9 @@ This project uses an ESP32, a DHT11 temperature/humidity sensor, a relay module,
 The DHT11 measures the surrounding temperature and humidity. The ESP32 processes the sensor readings and controls the relay. Telegram provides a remote interface where the user can check the sensor status and turn the relay on or off.
 The project was completed progressively from Task 1 to Task 4. Each task added a new function to the system, beginning with basic sensor reading and ending with automatic temperature-based relay control.
 
+<img width="799" height="824" alt="Screenshot 2026-09-03 160601" src="https://github.com/user-attachments/assets/0962f656-e71f-4002-9bc0-c9c27a9ad472" />
+
+
 Task 1 — Sensor Read and Print
 Function
 Task 1 tests the DHT11 sensor and confirms that the ESP32 can read temperature and humidity correctly.
@@ -22,9 +25,6 @@ Added a five-second delay between readings.
 Purpose
 This task verifies that the sensor is correctly wired and functioning before adding Telegram and relay features.
 Screenshot evidence
-Insert your screenshot here:
-text
-<img width="799" height="824" alt="Screenshot 2026-09-03 160601" src="https://github.com/user-attachments/assets/11bb24d6-d547-4a1e-b97c-62c02f79ab9f" />
 
 
 Task 2 — Telegram Message Sending
