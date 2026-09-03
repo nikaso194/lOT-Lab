@@ -24,7 +24,8 @@ This task verifies that the sensor is correctly wired and functioning before add
 Screenshot evidence
 Insert your screenshot here:
 text
-[Insert Task 1 Thonny sensor-output screenshot here]
+<img width="799" height="824" alt="Screenshot 2026-09-03 160601" src="https://github.com/user-attachments/assets/11bb24d6-d547-4a1e-b97c-62c02f79ab9f" />
+
 
 Task 2 — Telegram Message Sending
 Function
